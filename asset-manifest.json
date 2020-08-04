@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/meraki-ssid-overview/static/css/main.5f361e03.chunk.css",
+    "main.js": "/meraki-ssid-overview/static/js/main.acce27f1.chunk.js",
+    "main.js.map": "/meraki-ssid-overview/static/js/main.acce27f1.chunk.js.map",
+    "runtime-main.js": "/meraki-ssid-overview/static/js/runtime-main.94f64a93.js",
+    "runtime-main.js.map": "/meraki-ssid-overview/static/js/runtime-main.94f64a93.js.map",
+    "static/js/2.c13a80a9.chunk.js": "/meraki-ssid-overview/static/js/2.c13a80a9.chunk.js",
+    "static/js/2.c13a80a9.chunk.js.map": "/meraki-ssid-overview/static/js/2.c13a80a9.chunk.js.map",
+    "index.html": "/meraki-ssid-overview/index.html",
+    "precache-manifest.7c560462522e15704fdf2d66bae91cad.js": "/meraki-ssid-overview/precache-manifest.7c560462522e15704fdf2d66bae91cad.js",
+    "service-worker.js": "/meraki-ssid-overview/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/meraki-ssid-overview/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.c13a80a9.chunk.js.LICENSE.txt": "/meraki-ssid-overview/static/js/2.c13a80a9.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/meraki-ssid-overview/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.94f64a93.js",
+    "static/js/2.c13a80a9.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.acce27f1.chunk.js"
+  ]
+}
