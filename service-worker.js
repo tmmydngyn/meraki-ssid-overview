@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/meraki-ssid-overview/precache-manifest.7c560462522e15704fdf2d66bae91cad.js"
+  "/meraki-ssid-overview/precache-manifest.fddf915676d649a1df97c363a3f9a454.js"
 );
 
 self.addEventListener('message', (event) => {
