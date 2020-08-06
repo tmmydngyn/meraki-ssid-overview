@@ -1,25 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Fragment, useState} from 'react';
+import { AntDApp } from './antd/AntDApp';
+import { ElasticUiApp } from './eui/ElasticUiApp';
+import { Switch } from 'antd';
 
-function App() {
+const App = () => {
+  const [viewAntD, setViewAntD] = useState(true);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      { viewAntD ? <AntDApp /> : <ElasticUiApp /> }
+      <div>
+        <Switch onChange={() => setViewAntD(!viewAntD)} />
+        <span>{ `Currently viewing ${ viewAntD ? "AntD" : "ElasticUI" } library.` }</span>
+      </div>
+    </Fragment>
   );
 }
 
