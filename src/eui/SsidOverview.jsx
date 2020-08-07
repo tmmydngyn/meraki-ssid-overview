@@ -64,6 +64,7 @@ const columns = [
   {
     name: "Bandwidth limit",
     field: "bandwidthLimit",
+    render: limit => limit || "Unlimited"
   },
   {
     name: "AP tags",

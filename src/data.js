@@ -29,7 +29,7 @@ export const ssids = {
     band: 1,
     encryption: "802.1x",
     vlan: 132,
-    bandwithLimit: null,
+    bandwidthLimit: "10 Mbps",
     tags: [1, 2, 5],
   },
   2: {
@@ -39,7 +39,7 @@ export const ssids = {
     band: 3,
     encryption: "802.1x",
     vlan: 132,
-    bandwithLimit: null,
+    bandwidthLimit: null,
     tags: [2, 4],
   },
   3: {
@@ -49,7 +49,7 @@ export const ssids = {
     band: 3,
     encryption: "802.1x",
     vlan: 132,
-    bandwithLimit: null,
+    bandwidthLimit: "25 Mbps",
     tags: [2, 3, 5],
   },
   4: {
@@ -59,7 +59,7 @@ export const ssids = {
     band: 2,
     encryption: "802.1x",
     vlan: 132,
-    bandwithLimit: null,
+    bandwidthLimit: null,
     tags: [1],
   },
   5: {
@@ -69,7 +69,7 @@ export const ssids = {
     band: 1,
     encryption: "802.1x",
     vlan: 132,
-    bandwithLimit: null,
+    bandwidthLimit: "10 Mbps",
     tags: [4, 5],
   },
 };

@@ -10,6 +10,7 @@ import {
   EuiPageHeaderSection,
   EuiPageSideBar,
   EuiSearchBar,
+  EuiFlexItem,
 } from '@elastic/eui';
 
 import { SsidOverview } from './SsidOverview';
@@ -22,11 +23,13 @@ export const ElasticUiApp = () => (
     </EuiPageSideBar>
     <EuiPageBody component="div">
       <EuiPageHeader>
+        <EuiFlexItem grow={1}>
+          <EuiPageHeaderSection>
+              <EuiSearchBar box={ { placeholder: "Search for networks, users, devices, help articles..." } } className="" />
+          </EuiPageHeaderSection>
+        </EuiFlexItem>
         <EuiPageHeaderSection>
-          <EuiSearchBar />
-        </EuiPageHeaderSection>
-        <EuiPageHeaderSection>
-          <EuiButtonEmpty color="text"iconType="arrowDown" iconSide="right" size="s">
+          <EuiButtonEmpty color="text"iconType="arrowDown" iconSide="right" size="s" style={ { marginLeft:"1rem" } }>
             miles@meraki.net
           </EuiButtonEmpty>
         </EuiPageHeaderSection>
