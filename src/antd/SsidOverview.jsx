@@ -1,81 +1,6 @@
 import React from "react";
 import { Button, Col, Input, Row, Select, Table, Tag, Typography } from 'antd';
-
-const TAGS = {
-  1: {
-    id: 1,
-    name: "TestyTest",
-  },
-  2: {
-    id: 2,
-    name: "bloop",
-  },
-  3: {
-    id: 3,
-    name: "beeepeep",
-  },
-  4: {
-    id: 4,
-    name: "meeeeP",
-  },
-  5: {
-    id: 5,
-    name: "cool AP tag",
-  },
-}
-
-const SSID_DATA = [
-  {
-    id: 1,
-    name: "poopoopeepee",
-    isEnabled: true,
-    band: 1,
-    encryption: "802.1x",
-    vlan: 132,
-    bandwithLimit: null,
-    tags: [1, 2, 5],
-  },
-  {
-    id: 2,
-    name: "poopoopeepee - guest",
-    isEnabled: true,
-    band: 3,
-    encryption: "802.1x",
-    vlan: 132,
-    bandwithLimit: null,
-    tags: [2, 4],
-  },
-  {
-    id: 3,
-    name: "poopoopeepee - warehouse",
-    isEnabled: false,
-    band: 3,
-    encryption: "802.1x",
-    vlan: 132,
-    bandwithLimit: null,
-    tags: [2, 3, 5],
-  },
-  {
-    id: 4,
-    name: "poopoopeepee - daycare",
-    isEnabled: false,
-    band: 2,
-    encryption: "802.1x",
-    vlan: 132,
-    bandwithLimit: null,
-    tags: [1],
-  },
-  {
-    id: 5,
-    name: "poopoopeepee - dorms",
-    isEnabled: true,
-    band: 1,
-    encryption: "802.1x",
-    vlan: 132,
-    bandwithLimit: null,
-    tags: [4, 5],
-  },
-];
+import { tags, ssids } from '../data';
 
 const columns = [
   {
@@ -132,7 +57,7 @@ const columns = [
     dataIndex: "tags",
     render: tagIds => (
       <span>
-        { tagIds.map(tagId => <Tag color="blue" key={tagId}>{ TAGS[tagId].name }</Tag>) }
+        { tagIds.map(tagId => <Tag color="blue" key={tagId}>{ tags[tagId].name }</Tag>) }
       </span>
     ),
   },
@@ -143,7 +68,7 @@ const columns = [
 
 export const SsidOverview = () => {
   const filterSelect = (<Select placeholder="Filter">
-    <Select.Option>poop</Select.Option>
+    <Select.Option>keke</Select.Option>
   </Select>);
   return (
     <div style={{ margin: "2rem" }}>
@@ -165,7 +90,7 @@ export const SsidOverview = () => {
       </Row>
       <Row gutter={[16, 16]}>
         <Col span={24}>
-          <Table columns={columns} dataSource={SSID_DATA} />
+          <Table columns={columns} dataSource={Object.values(ssids)} />
         </Col>
       </Row>
     </div>

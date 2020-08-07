@@ -2,43 +2,36 @@ import '@elastic/eui/dist/eui_theme_light.css';
 import React from 'react';
 
 import {
+  EuiButtonEmpty,
+  EuiImage,
   EuiPage,
   EuiPageBody,
-  EuiPageContent,
-  EuiPageContentBody,
-  EuiPageContentHeader,
-  EuiPageContentHeaderSection,
   EuiPageHeader,
   EuiPageHeaderSection,
   EuiPageSideBar,
-  EuiTitle,
+  EuiSearchBar,
 } from '@elastic/eui';
+
+import { SsidOverview } from './SsidOverview';
+import ciscoMerakiLogo from '../images/cisco-meraki-white.svg'
 
 export const ElasticUiApp = () => (
   <EuiPage>
-    <EuiPageSideBar>SideBar nav</EuiPageSideBar>
+    <EuiPageSideBar style={{backgroundColor: "#3D3E40"}}>
+      <EuiImage url={ciscoMerakiLogo} alt="Cisco Meraki logo" size="s" style={{margin:"1rem"}} />
+    </EuiPageSideBar>
     <EuiPageBody component="div">
       <EuiPageHeader>
         <EuiPageHeaderSection>
-          <EuiTitle size="l">
-            <h1>Page title</h1>
-          </EuiTitle>
+          <EuiSearchBar />
         </EuiPageHeaderSection>
-        <EuiPageHeaderSection>Page abilities</EuiPageHeaderSection>
+        <EuiPageHeaderSection>
+          <EuiButtonEmpty color="text"iconType="arrowDown" iconSide="right" size="s">
+            miles@meraki.net
+          </EuiButtonEmpty>
+        </EuiPageHeaderSection>
       </EuiPageHeader>
-      <EuiPageContent>
-        <EuiPageContentHeader>
-          <EuiPageContentHeaderSection>
-            <EuiTitle>
-              <h2>Content title</h2>
-            </EuiTitle>
-          </EuiPageContentHeaderSection>
-          <EuiPageContentHeaderSection>
-            Content abilities
-          </EuiPageContentHeaderSection>
-        </EuiPageContentHeader>
-        <EuiPageContentBody>Content body</EuiPageContentBody>
-      </EuiPageContent>
+      <SsidOverview />
     </EuiPageBody>
   </EuiPage>
 );

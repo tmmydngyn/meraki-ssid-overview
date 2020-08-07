@@ -4,7 +4,7 @@ import { ElasticUiApp } from './eui/ElasticUiApp';
 import { Switch } from 'antd';
 
 const App = () => {
-  const [viewAntD, setViewAntD] = useState(true);
+  const [viewAntD, setViewAntD] = useState(false);
   return (
     <Fragment>
       { viewAntD ? <AntDApp /> : <ElasticUiApp /> }
